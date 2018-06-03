@@ -14,7 +14,7 @@ if (process.env.JAWSDB_URL) {
 
 	  // My password
 	  password: "1q2w3e4r",
-	  database: "heat_db"
+	  database: "heat"
 });
  };
 

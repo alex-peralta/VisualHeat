@@ -86,6 +86,21 @@ var orm = {
 
       cb(result);
     });
+  },
+  selectCountryTemp: function(country_code, cb) {
+    var vals = [country_code];
+    var queryString = "SELECT * FROM temperature";
+
+    queryString += " WHERE COUNTRY_CODE = ?";
+
+    console.log(queryString);
+    connection.query(queryString, vals,function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
   }
 };
 

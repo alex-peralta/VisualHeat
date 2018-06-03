@@ -2,15 +2,15 @@
 var orm = require("../config/orm.js");
 
 var heat = {
-  all: function(cb) {
+  country_list: function(cb) {
     //add params 
-    orm.selectAll("", function(res) {
+    orm.selectAll("country", function(res) {
       cb(res);
     });
   },
   // The variables cols and vals are arrays.
-  create: function(cols, vals, cb) {
-    orm.insertOne("", cols, vals, function(res) {
+  country_temp: function(country_code,cb) {
+    orm.selectCountryTemp(country_code,function(res) {
       cb(res);
     });
   },

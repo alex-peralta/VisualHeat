@@ -7,7 +7,7 @@ var heat = require("../models/heat.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  heat.all(function(data) {
+  heat.country_list(function(data) {
     var hbsObject = {
       heat: data
     };
@@ -16,11 +16,25 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/", function(req, res) {
-  //later add params we want to use in our database
-  heat.create([""], [],
-   function() {
-    res.redirect("/");
+router.get("/api/:country", function(req, res) {
+  var country_code = req.params.country;
+  heat.country_temp(country_code,function(data) {
+    var hbsObject = {
+      heat: data
+    };
+    console.log(hbsObject);
+    res.send(hbsObject);
+  });
+});
+
+router.post("/api/:country", function(req, res) {
+  var country_code = req.params.country;
+  heat.country_temp(country_code,function(data) {
+    var hbsObject = {
+      heat: data
+    };
+    console.log(hbsObject);
+    res.send(hbsObject);
   });
 });
 

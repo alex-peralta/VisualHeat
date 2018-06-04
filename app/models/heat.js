@@ -1,26 +1,23 @@
-// Import the ORM to create functions that will interact with the database.
+// heat.js  supplies information to the view as requested 
+// Importing  the ORM to access the database.
+
 var orm = require("../config/orm.js");
 
 var heat = {
+  //returns complete list of countries stored in country table
   country_list: function(cb) {
-    //add params 
+    
     orm.selectAll("country", function(res) {
       cb(res);
     });
   },
-  // The variables cols and vals are arrays.
+  //returns the list of the annual avg temp filtered by country_code
   country_temp: function(country_code,cb) {
     orm.selectCountryTemp(country_code,function(res) {
-      cb(res);
-    });
-  },
-  update: function(objColVals, condition, cb) {
-    //add params
-    orm.updateOne("", objColVals, condition, function(res) {
       cb(res);
     });
   }
 };
 
-// Export the database functions for the controller (heat.js).
+// Exports the database functions for the controller
 module.exports = heat;

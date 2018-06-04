@@ -1,4 +1,4 @@
-
+//orm.js holds set of functions that send requests to database to pull data
 // Import MySQL connection.
 var connection = require("./connection.js");
 
@@ -93,7 +93,7 @@ var orm = {
 
     queryString += " WHERE COUNTRY_CODE = ?";
 
-    console.log(queryString);
+    //console.log(queryString);
     connection.query(queryString, vals,function(err, result) {
       if (err) {
         throw err;

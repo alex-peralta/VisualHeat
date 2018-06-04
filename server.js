@@ -16,13 +16,15 @@ app.use(bodyParser.json());
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
+//set default path to views folder
 app.set("views", "app/views/");
-app.set("layouts","app/views/layouts");
-
+//path to layout is expected to be views/layouts without
+//taking into consideration the actual placement of the views folder as configured by line below
+//layoutsDir: "app/views/layouts" will set the actual path to the layout folder
 app.engine("handlebars", exphbs({ defaultLayout: "main" ,layoutsDir: "app/views/layouts"}));
 app.set("view engine", "handlebars");
 
-// Import routes and give the server access to them.
+// Importing routes and giving the server access to them.
 var routes = require("./app/controllers/heat_controller.js");
 
 app.use("/",routes);

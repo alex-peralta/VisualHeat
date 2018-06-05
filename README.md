@@ -12,7 +12,11 @@ Navigate to [VisualHeat](https://sheltered-beach-15234.herokuapp.com/) in a brow
 https://sheltered-beach-15234.herokuapp.com/
 ```
 
-## Screen Shots
+## Technology Stack
+- [MySQL](https://www.mysql.com/)
+- [Heroku](www.heroku.com)
+- [Handlebars.js](https://handlebarsjs.com/)
+- [Plotly.js](https://plot.ly/javascript/getting-started/)
 
 ## Development Team
 

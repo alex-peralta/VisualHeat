@@ -1,14 +1,20 @@
-<<head>
-	<!-- Plotly.js -->
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-
-<body>
-
+<div class ="ready">
+	<div>
+     	<select id="countries">
+ 		{{#each heat}}
+ 
+     		
+		  <option value="{{this.CODE}}">{{this.NAME}}</option>
+		  
+		
+  		{{/each}} 
+  		</select>
+        
+	</div>
+</div>
 <div id="chart_div"><!-- Plotly chart will be drawn inside this DIV --></div>
 <script>
-
+	$('#countries').val("USA");
 	var trace;
 	var layout = {
 		title: 'Anual Average Temperature',
@@ -20,8 +26,8 @@
 		}
 	};
 
-	// change static reference to api call
-	$.getJSON("/api/" + country_code ,addData);
+	
+	$.getJSON("/api/USA" ,addData);
 
 	function addData(data){
 		var arr = data.heat;
@@ -42,5 +48,7 @@
 		Plotly.newPlot('chart_div', data, layout);
 	}
 
+	$( "#countries" ).change(function() {
+	  $.getJSON("/api/" + $('#countries').val(),addData);
+	});
 </script>
-</body>

@@ -2,9 +2,9 @@
   "name": "VisualHeat",
   "version": "1.0.0",
   "description": "This application allows the end user to visualize the Continental United States temperature variations from the last 100 years in an interactive way.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

@@ -16,8 +16,8 @@ if (process.env.JAWSDB_URL) {
 	  // My password
 	  password: "1q2w3e4r",
 	  database: "heat"
-});
- };
+ 	});
+};
 
 // connect to the mysql server and sql database
 connection.connect(function(err) {

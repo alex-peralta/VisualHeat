@@ -5,8 +5,8 @@ var router = express.Router();
 // Imports the model (heat.js) to use its database functions.
 var heat = require("../models/heat.js");
 
-// Creats all our routes and sets up logic within those routes where required.
-//renders main page when a GET request is made to the homepage 
+// Creates all our routes and sets up logic within those routes where required.
+// renders main page when a GET request is made to the homepage
 router.get("/", function(req, res) {
   heat.country_list(function(data) {
     var hbsObject = {

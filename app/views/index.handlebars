@@ -16,20 +16,46 @@
 <script>
 	$('#countries').val("USA");
 	var trace;
-	var layout = {
-		title: 'Annual Average Temperature',
-		xaxis: {
-			title: 'Year'
-		},
-		yaxis: {
-			title: 'Average Temperature'
-		}
-	};
+	
 
-	n
+	
 	$.getJSON("/api/USA" ,addData);
 
 	function addData(data){
+
+		var layout = {
+			"autosize": true, 
+			"title": "<b>" + $('#countries option:selected').text() + " Annual Average Temperature<\/b>", 
+			"paper_bgcolor": "rgb(134, 106, 178)", 
+			"plot_bgcolor": "rgb(210, 185, 185)", 
+			"yaxis": {
+				"type": "linear", 
+				"autorange": true, 
+				"title": "Average Temperature"
+			}, 
+			"breakpoints": [], 
+			"titlefont": {"color": "rgb(21, 20, 20)", "size": 22}, 
+			"xaxis": { 
+				"type": "linear", 
+				"autorange": true, 
+				"title": "Year"
+			}, 
+			"font": {"color": "rgb(13, 13, 13)", "family": "Arial", "size": 15}
+		};
+		/*var layout = {
+			title: $("#countries option:selected").text() + ' Annual Average Temperature',
+			xaxis: {
+				title: 'Year'
+			},
+			yaxis: {
+				title: 'Average Temperature'
+			},
+			titlefont: {
+		        family: 'Arial',
+		        size: 12,
+		        color: 'rgb(21, 20, 20)'
+		      }
+		};*/
 		var arr = data.heat;
 		var x = [];
 		var y = [];

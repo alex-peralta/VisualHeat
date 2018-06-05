@@ -12,6 +12,9 @@ Navigate to [VisualHeat](https://sheltered-beach-15234.herokuapp.com/) in a brow
 https://sheltered-beach-15234.herokuapp.com/
 ```
 
+## Screenshots
+![U.S.A Data](public/assets/img/VisualHeat.jpg)
+
 ## Technology Stack
 - [MySQL](https://www.mysql.com/)
 - [Heroku](www.heroku.com)

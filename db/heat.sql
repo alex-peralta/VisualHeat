@@ -1,3 +1,8 @@
+ALTER TABLE `i0rz0zk37241gecl`.`country`
+CHANGE COLUMN `CreatedAt` `CreatedAt` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+
+
+
 CREATE DATABASE  IF NOT EXISTS `heat` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `heat`;
 -- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
@@ -27,6 +32,7 @@ DROP TABLE IF EXISTS `country`;
 CREATE TABLE `country` (
   `NAME` text,
   `CODE` varchar(3) NOT NULL,
+  `CreatedAt` TIMESTAMP NOT NULL,
   PRIMARY KEY (`CODE`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -49,9 +55,12 @@ DROP TABLE IF EXISTS `temperature`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `temperature` (
+  `id` INT AUTO_INCREMENT NOT NULL,
   `COUNTRY_CODE` varchar(3) DEFAULT NULL,
   `YEAR` int(11) DEFAULT NULL,
-  `DATA` double DEFAULT NULL
+  `DATA` double DEFAULT NULL,
+  `createdAt` TIMESTAMP NOT NULL,
+  PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

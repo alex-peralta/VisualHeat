@@ -23,12 +23,12 @@ https://sheltered-beach-15234.herokuapp.com/
 
 ## Development Team
 
-- Nelly Ackerman - pavel.ack@gmail.com
-    - Contributions: MVC Structure, API Routes, Node.js
-- Dennis Gayvoronsky - Deniskag@gmail.com
-    - Contributions: MySQL, ORM
-- Alex Peralta - alex.peralta.sr@gmail.com
-    - Contributions: Project Manager, Design, Node.js
+- Nelly Ackerman - <pavel.ack@gmail.com>
+    - __Contributions:__ *MVC Structure, API Routes, Node.js* 
+- Dennis Gayvoronsky - <Deniskag@gmail.com>
+    - __Contributions:__ *MySQL, ORM*
+- Alex Peralta - <alex.peralta.sr@gmail.com>
+    - __Contributions:__ *Project Manager, Design, Node.js*
 
 ###### Data Sources
 * [www.nationsonline.org](http://www.nationsonline.org/oneworld/country_code_list.htm)
